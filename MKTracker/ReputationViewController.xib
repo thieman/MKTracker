@@ -20,19 +20,19 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Reputation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sj8-Zc-mZA">
-                    <rect key="frame" x="8" y="45" width="584" height="33"/>
+                    <rect key="frame" x="8" y="37" width="584" height="33"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="100" verticalHuggingPriority="100" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ofn-JJ-Pd8">
-                    <rect key="frame" x="253" y="409" width="94" height="29"/>
+                    <rect key="frame" x="253" y="401" width="94" height="29"/>
                     <connections>
                         <action selector="changeReputation:" destination="-1" eventType="valueChanged" id="sJF-Hm-GKG"/>
                     </connections>
                 </stepper>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Raw Reputation: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ujh-b4-41j">
-                    <rect key="frame" x="8" y="330" width="584" height="33"/>
+                    <rect key="frame" x="8" y="322" width="584" height="33"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="33" id="uIm-Bm-ofu"/>
                     </constraints>
@@ -41,7 +41,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😁" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aow-Dg-Uga">
-                    <rect key="frame" x="8" y="86" width="584" height="236"/>
+                    <rect key="frame" x="8" y="78" width="584" height="236"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="236" id="5B6-iG-7LD"/>
                     </constraints>
@@ -54,7 +54,7 @@
             <constraints>
                 <constraint firstItem="Aow-Dg-Uga" firstAttribute="trailing" secondItem="Ujh-b4-41j" secondAttribute="trailing" id="7Ek-oG-sD7"/>
                 <constraint firstItem="sj8-Zc-mZA" firstAttribute="trailing" secondItem="Aow-Dg-Uga" secondAttribute="trailing" id="7RQ-af-IoA"/>
-                <constraint firstItem="sj8-Zc-mZA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="45" id="IYH-cY-Fjc"/>
+                <constraint firstItem="sj8-Zc-mZA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="37" id="IYH-cY-Fjc"/>
                 <constraint firstItem="Aow-Dg-Uga" firstAttribute="top" secondItem="sj8-Zc-mZA" secondAttribute="bottom" constant="8" symbolic="YES" id="KiT-U4-uWl"/>
                 <constraint firstItem="ofn-JJ-Pd8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="252" id="Q0h-rG-omF"/>
                 <constraint firstItem="Ujh-b4-41j" firstAttribute="centerX" secondItem="ofn-JJ-Pd8" secondAttribute="centerX" id="Siq-Qh-jgU"/>

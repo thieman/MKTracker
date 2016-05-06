@@ -19,7 +19,7 @@ class ReputationViewController: UIViewController {
     
     init() {
         super.init(nibName: nil, bundle: nil)
-        let icon = Utils.imageFromText("♥️", font: UIFont(name: "Helvetica", size: 32)!, maxWidth: CGFloat(64), color: UIColor.blueColor())
+        let icon = Utils.imageFromText("♥️", font: UIFont(name: "Helvetica", size: 28)!, maxWidth: CGFloat(64), color: UIColor.blueColor())
         tabBarItem = UITabBarItem(title: "Reputation", image: icon, tag: 0)
     }
     

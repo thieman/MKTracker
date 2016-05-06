@@ -33,10 +33,10 @@ class ExperienceViewController: UIViewController, UITableViewDataSource, UITable
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.edgesForExtendedLayout = .None
         self.levelTableView.dataSource = self
         self.levelTableView.delegate = self
         self.levelTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "ident")
+        self.levelTableView.tableFooterView = UIView()
         stepper.value = Double(self.model.currentXP)
         lastSenderValue = stepper.value
         updateUI()
