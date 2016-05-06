@@ -12,6 +12,7 @@
                 <outlet property="currentXPLabel" destination="a6g-gE-fsL" id="moV-iA-NIK"/>
                 <outlet property="distanceXPLabel" destination="vos-cP-pAM" id="BYF-vt-tOt"/>
                 <outlet property="levelTableView" destination="Nza-Y3-XIJ" id="4wW-He-4I6"/>
+                <outlet property="stepper" destination="38b-o6-hrg" id="Mws-YH-DkJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

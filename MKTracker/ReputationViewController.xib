@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReputationViewController" customModule="MKTracker" customModuleProvider="target">
+            <connections>
+                <outlet property="rawLabel" destination="Ujh-b4-41j" id="adN-mw-03Y"/>
+                <outlet property="stepper" destination="ofn-JJ-Pd8" id="yQa-05-AhR"/>
+                <outlet property="valueLabel" destination="Aow-Dg-Uga" id="rsd-u0-bro"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Reputation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sj8-Zc-mZA">
+                    <rect key="frame" x="8" y="45" width="584" height="33"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="100" verticalHuggingPriority="100" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ofn-JJ-Pd8">
+                    <rect key="frame" x="253" y="409" width="94" height="29"/>
+                    <connections>
+                        <action selector="changeReputation:" destination="-1" eventType="valueChanged" id="sJF-Hm-GKG"/>
+                    </connections>
+                </stepper>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Raw Reputation: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ujh-b4-41j">
+                    <rect key="frame" x="8" y="330" width="584" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="33" id="uIm-Bm-ofu"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😁" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aow-Dg-Uga">
+                    <rect key="frame" x="8" y="86" width="584" height="236"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="236" id="5B6-iG-7LD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="128"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Aow-Dg-Uga" firstAttribute="trailing" secondItem="Ujh-b4-41j" secondAttribute="trailing" id="7Ek-oG-sD7"/>
+                <constraint firstItem="sj8-Zc-mZA" firstAttribute="trailing" secondItem="Aow-Dg-Uga" secondAttribute="trailing" id="7RQ-af-IoA"/>
+                <constraint firstItem="sj8-Zc-mZA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="45" id="IYH-cY-Fjc"/>
+                <constraint firstItem="Aow-Dg-Uga" firstAttribute="top" secondItem="sj8-Zc-mZA" secondAttribute="bottom" constant="8" symbolic="YES" id="KiT-U4-uWl"/>
+                <constraint firstItem="ofn-JJ-Pd8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="252" id="Q0h-rG-omF"/>
+                <constraint firstItem="Ujh-b4-41j" firstAttribute="centerX" secondItem="ofn-JJ-Pd8" secondAttribute="centerX" id="Siq-Qh-jgU"/>
+                <constraint firstItem="sj8-Zc-mZA" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="TVV-wL-1ug"/>
+                <constraint firstItem="sj8-Zc-mZA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="UGh-ao-qlx"/>
+                <constraint firstItem="sj8-Zc-mZA" firstAttribute="leading" secondItem="Aow-Dg-Uga" secondAttribute="leading" id="d0j-n3-FyO"/>
+                <constraint firstItem="Aow-Dg-Uga" firstAttribute="leading" secondItem="Ujh-b4-41j" secondAttribute="leading" id="du5-r9-dx5"/>
+                <constraint firstItem="ofn-JJ-Pd8" firstAttribute="top" secondItem="Ujh-b4-41j" secondAttribute="bottom" constant="46" id="rng-4B-gIc"/>
+                <constraint firstItem="Ujh-b4-41j" firstAttribute="top" secondItem="Aow-Dg-Uga" secondAttribute="bottom" constant="8" symbolic="YES" id="vGq-23-prb"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Q0h-rG-omF"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

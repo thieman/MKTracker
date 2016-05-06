@@ -16,6 +16,7 @@ class ExperienceViewController: UIViewController, UITableViewDataSource, UITable
     @IBOutlet weak var distanceXPLabel: UILabel!
     @IBOutlet weak var currentLevelLabel: UILabel!
     @IBOutlet weak var levelTableView: UITableView!
+    @IBOutlet weak var stepper: UIStepper!
     
     let model = ExperienceModel.initFromUserDefaults() as? ExperienceModel ?? ExperienceModel()
     var lastSenderValue = 0.0
@@ -36,6 +37,8 @@ class ExperienceViewController: UIViewController, UITableViewDataSource, UITable
         self.levelTableView.dataSource = self
         self.levelTableView.delegate = self
         self.levelTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "ident")
+        stepper.value = Double(self.model.currentXP)
+        lastSenderValue = stepper.value
         updateUI()
     }
     

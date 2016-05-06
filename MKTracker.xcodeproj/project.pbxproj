@@ -14,6 +14,9 @@
 		1F7144EA1CDCD9670098DD5E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7144E91CDCD9670098DD5E /* Utils.swift */; };
 		1F7144EC1CDCE10D0098DD5E /* ExperienceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7144EB1CDCE10D0098DD5E /* ExperienceModel.swift */; };
 		1F7144EE1CDD02A50098DD5E /* PersistableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7144ED1CDD02A50098DD5E /* PersistableModel.swift */; };
+		1F7144F11CDD12390098DD5E /* ReputationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7144EF1CDD12390098DD5E /* ReputationViewController.swift */; };
+		1F7144F21CDD12390098DD5E /* ReputationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F7144F01CDD12390098DD5E /* ReputationViewController.xib */; };
+		1F7144F41CDD163B0098DD5E /* ReputationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7144F31CDD163B0098DD5E /* ReputationModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		1F7144E91CDCD9670098DD5E /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		1F7144EB1CDCE10D0098DD5E /* ExperienceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperienceModel.swift; sourceTree = "<group>"; };
 		1F7144ED1CDD02A50098DD5E /* PersistableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistableModel.swift; sourceTree = "<group>"; };
+		1F7144EF1CDD12390098DD5E /* ReputationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReputationViewController.swift; sourceTree = "<group>"; };
+		1F7144F01CDD12390098DD5E /* ReputationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReputationViewController.xib; sourceTree = "<group>"; };
+		1F7144F31CDD163B0098DD5E /* ReputationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReputationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,9 @@
 			isa = PBXGroup;
 			children = (
 				1F7144E51CDCD6FA0098DD5E /* ExperienceViewController.swift */,
+				1F7144EF1CDD12390098DD5E /* ReputationViewController.swift */,
+				1F7144F31CDD163B0098DD5E /* ReputationModel.swift */,
+				1F7144F01CDD12390098DD5E /* ReputationViewController.xib */,
 				1F7144E91CDCD9670098DD5E /* Utils.swift */,
 				1F7144E61CDCD6FA0098DD5E /* ExperienceViewController.xib */,
 				1F7144EB1CDCE10D0098DD5E /* ExperienceModel.swift */,
@@ -130,6 +139,7 @@
 			files = (
 				1F7144E81CDCD6FA0098DD5E /* ExperienceViewController.xib in Resources */,
 				1F7144DB1CDCD6800098DD5E /* Assets.xcassets in Resources */,
+				1F7144F21CDD12390098DD5E /* ReputationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +155,8 @@
 				1F7144EE1CDD02A50098DD5E /* PersistableModel.swift in Sources */,
 				1F7144D41CDCD6800098DD5E /* AppDelegate.swift in Sources */,
 				1F7144EA1CDCD9670098DD5E /* Utils.swift in Sources */,
+				1F7144F41CDD163B0098DD5E /* ReputationModel.swift in Sources */,
+				1F7144F11CDD12390098DD5E /* ReputationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

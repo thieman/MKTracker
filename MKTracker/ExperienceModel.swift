@@ -6,7 +6,7 @@
 //  Copyright © 2016 Travis Thieman. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 enum LevelUpReward: Int {
     case CommandToken, SkillAndAdvancedAction

@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let rootController = UITabBarController()
         
         
-        rootController.setViewControllers([ExperienceViewController(), ExperienceViewController()], animated: true)
+        rootController.setViewControllers([ExperienceViewController(), ReputationViewController()], animated: true)
         rootController.selectedIndex = 0
         
         self.window?.rootViewController = rootController
