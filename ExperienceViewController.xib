@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExperienceViewController" customModule="MKTracker" customModuleProvider="target">
+            <connections>
+                <outlet property="currentLevelLabel" destination="FUT-uv-DJI" id="sTp-UG-8M0"/>
+                <outlet property="currentXPLabel" destination="a6g-gE-fsL" id="moV-iA-NIK"/>
+                <outlet property="distanceXPLabel" destination="vos-cP-pAM" id="BYF-vt-tOt"/>
+                <outlet property="levelTableView" destination="Nza-Y3-XIJ" id="4wW-He-4I6"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="100" verticalHuggingPriority="100" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="38b-o6-hrg">
+                    <rect key="frame" x="253" y="326" width="94" height="29"/>
+                    <connections>
+                        <action selector="changeXP:" destination="-1" eventType="valueChanged" id="IiG-Ei-kQX"/>
+                    </connections>
+                </stepper>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 to Next Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vos-cP-pAM">
+                    <rect key="frame" x="261" y="280" width="79" height="14"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Experience" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8E7-A5-qFz">
+                    <rect key="frame" x="8" y="37" width="584" height="33"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Level 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUT-uv-DJI">
+                    <rect key="frame" x="8" y="78" width="584" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="33" id="NLA-kQ-Us3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nza-Y3-XIJ">
+                    <rect key="frame" x="8" y="397" width="592" height="195"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6g-gE-fsL">
+                    <rect key="frame" x="8" y="132" width="584" height="140"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="153" id="dLl-df-47p"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="120"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="dLl-df-47p"/>
+                        </mask>
+                    </variation>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="FUT-uv-DJI" firstAttribute="top" secondItem="8E7-A5-qFz" secondAttribute="bottom" constant="8" symbolic="YES" id="3zh-JM-1Ky"/>
+                <constraint firstItem="Nza-Y3-XIJ" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottomMargin" id="7gd-DB-iCt"/>
+                <constraint firstItem="vos-cP-pAM" firstAttribute="top" secondItem="a6g-gE-fsL" secondAttribute="bottom" constant="8" symbolic="YES" id="9T6-Mh-TNN"/>
+                <constraint firstItem="Nza-Y3-XIJ" firstAttribute="top" secondItem="38b-o6-hrg" secondAttribute="bottom" constant="42" id="JF8-MN-Dsh"/>
+                <constraint firstItem="Nza-Y3-XIJ" firstAttribute="leading" secondItem="a6g-gE-fsL" secondAttribute="leading" id="STU-d6-jde"/>
+                <constraint firstItem="8E7-A5-qFz" firstAttribute="trailing" secondItem="FUT-uv-DJI" secondAttribute="trailing" id="WY7-Lf-a3H"/>
+                <constraint firstItem="8E7-A5-qFz" firstAttribute="leading" secondItem="FUT-uv-DJI" secondAttribute="leading" id="Ypj-7e-FDR"/>
+                <constraint firstItem="a6g-gE-fsL" firstAttribute="top" secondItem="FUT-uv-DJI" secondAttribute="bottom" constant="21" id="agJ-R5-pF9"/>
+                <constraint firstItem="38b-o6-hrg" firstAttribute="top" secondItem="vos-cP-pAM" secondAttribute="bottom" constant="32" id="bGK-cc-OFy"/>
+                <constraint firstItem="a6g-gE-fsL" firstAttribute="centerX" secondItem="vos-cP-pAM" secondAttribute="centerX" id="cMC-6f-e2O"/>
+                <constraint firstItem="8E7-A5-qFz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="37" id="cyR-7t-e0Q"/>
+                <constraint firstItem="8E7-A5-qFz" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="hQh-5V-pdm"/>
+                <constraint firstItem="8E7-A5-qFz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="hgt-rU-uGl"/>
+                <constraint firstItem="FUT-uv-DJI" firstAttribute="trailing" secondItem="a6g-gE-fsL" secondAttribute="trailing" id="iNO-sQ-FqH"/>
+                <constraint firstItem="FUT-uv-DJI" firstAttribute="leading" secondItem="a6g-gE-fsL" secondAttribute="leading" id="imo-XH-DOQ"/>
+                <constraint firstAttribute="trailing" secondItem="Nza-Y3-XIJ" secondAttribute="trailing" id="tZO-P3-unz"/>
+                <constraint firstItem="vos-cP-pAM" firstAttribute="centerX" secondItem="38b-o6-hrg" secondAttribute="centerX" id="uhO-2w-caE"/>
+            </constraints>
+            <point key="canvasLocation" x="497" y="481"/>
+        </view>
+    </objects>
+</document>
