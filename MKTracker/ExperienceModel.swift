@@ -8,30 +8,42 @@
 
 import UIKit
 
-enum LevelUpReward {
+enum LevelUpReward: Int {
     case CommandToken, SkillAndAdvancedAction
 }
 
-struct LevelUp: Equatable, Hashable {
+class LevelUp: NSObject {
     var level: Int
     var threshold: Int
     var reward: LevelUpReward
-    var hashValue: Int {
+    
+    init(level: Int, threshold: Int, reward: LevelUpReward) {
+        self.level = level
+        self.threshold = threshold
+        self.reward = reward
+        super.init()
+    }
+    
+    override var hashValue: Int {
         return self.level
     }
+    
 }
 
 func ==(left: LevelUp, right: LevelUp) -> Bool {
     return left.level == right.level
 }
 
-class ExperienceModel {
+class ExperienceModel: PersistableModel {
     
-    private var _currentXP = 0
+    static var persistenceKey = "experienceModel"
+    private var _currentXP = 0 { didSet { persist() } }
+    var earnedLevelUps = [LevelUp]() { didSet { persist() } }
+    var processedLevelUps = [LevelUp: Bool]() { didSet { persist() } }
     
     // Some methods assume this is already sorted, so don't screw it up
     let levels: [LevelUp] = [
-        LevelUp(level: 1, threshold: 0, reward: LevelUpReward.SkillAndAdvancedAction),
+        LevelUp(level: 1, threshold: 0, reward: LevelUpReward.CommandToken),
         LevelUp(level: 2, threshold: 3, reward: LevelUpReward.SkillAndAdvancedAction),
         LevelUp(level: 3, threshold: 8, reward: LevelUpReward.CommandToken),
         LevelUp(level: 4, threshold: 15, reward: LevelUpReward.SkillAndAdvancedAction),
@@ -43,8 +55,26 @@ class ExperienceModel {
         LevelUp(level: 10, threshold: 99, reward: LevelUpReward.SkillAndAdvancedAction)
     ]
     
-    var earnedLevelUps = [LevelUp]()
-    var processedLevelUps = [LevelUp: Bool]()
+    required convenience init(fromJSONDict dict: [String: AnyObject]) {
+        self.init()
+        self._currentXP = dict["_currentXP"] as! Int
+        for levelNumber in dict["earnedLevelUps"] as! [Int] {
+            earnedLevelUps.append(levels[levelNumber - 1])
+        }
+        for levelNumber in dict["processedLevelUps"] as! [Int] {
+            processedLevelUps[levels[levelNumber - 1]] = true
+        }
+    }
+    
+    func dictForJSON() -> [String : AnyObject] {
+        let result: [String: AnyObject]
+        result = [
+            "_currentXP": self._currentXP,
+            "earnedLevelUps": self.earnedLevelUps.map { $0.level },
+            "processedLevelUps": self.processedLevelUps.keys.map { $0.level }
+        ]
+        return result
+    }
     
     // Returns bool of whether a level up occurred
     func incrementXP() -> Bool {
@@ -65,7 +95,6 @@ class ExperienceModel {
         self._currentXP -= 1
         if startLevel != self.currentLevel {
             self.earnedLevelUps.removeLast(1)
-            self.processedLevelUps.removeValueForKey(startLevel)
             return true
         }
         return false

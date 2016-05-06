@@ -13,6 +13,7 @@
 		1F7144E81CDCD6FA0098DD5E /* ExperienceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F7144E61CDCD6FA0098DD5E /* ExperienceViewController.xib */; };
 		1F7144EA1CDCD9670098DD5E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7144E91CDCD9670098DD5E /* Utils.swift */; };
 		1F7144EC1CDCE10D0098DD5E /* ExperienceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7144EB1CDCE10D0098DD5E /* ExperienceModel.swift */; };
+		1F7144EE1CDD02A50098DD5E /* PersistableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7144ED1CDD02A50098DD5E /* PersistableModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1F7144E61CDCD6FA0098DD5E /* ExperienceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ExperienceViewController.xib; path = ../ExperienceViewController.xib; sourceTree = "<group>"; };
 		1F7144E91CDCD9670098DD5E /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		1F7144EB1CDCE10D0098DD5E /* ExperienceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperienceModel.swift; sourceTree = "<group>"; };
+		1F7144ED1CDD02A50098DD5E /* PersistableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistableModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				1F7144E91CDCD9670098DD5E /* Utils.swift */,
 				1F7144E61CDCD6FA0098DD5E /* ExperienceViewController.xib */,
 				1F7144EB1CDCE10D0098DD5E /* ExperienceModel.swift */,
+				1F7144ED1CDD02A50098DD5E /* PersistableModel.swift */,
 				1F7144D31CDCD6800098DD5E /* AppDelegate.swift */,
 				1F7144DA1CDCD6800098DD5E /* Assets.xcassets */,
 				1F7144DF1CDCD6800098DD5E /* Info.plist */,
@@ -139,6 +142,7 @@
 			files = (
 				1F7144E71CDCD6FA0098DD5E /* ExperienceViewController.swift in Sources */,
 				1F7144EC1CDCE10D0098DD5E /* ExperienceModel.swift in Sources */,
+				1F7144EE1CDD02A50098DD5E /* PersistableModel.swift in Sources */,
 				1F7144D41CDCD6800098DD5E /* AppDelegate.swift in Sources */,
 				1F7144EA1CDCD9670098DD5E /* Utils.swift in Sources */,
 			);

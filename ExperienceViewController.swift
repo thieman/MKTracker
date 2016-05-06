@@ -17,7 +17,7 @@ class ExperienceViewController: UIViewController, UITableViewDataSource, UITable
     @IBOutlet weak var currentLevelLabel: UILabel!
     @IBOutlet weak var levelTableView: UITableView!
     
-    let model = ExperienceModel()
+    let model = ExperienceModel.initFromUserDefaults() as? ExperienceModel ?? ExperienceModel()
     var lastSenderValue = 0.0
     
     init() {
@@ -36,6 +36,7 @@ class ExperienceViewController: UIViewController, UITableViewDataSource, UITable
         self.levelTableView.dataSource = self
         self.levelTableView.delegate = self
         self.levelTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "ident")
+        updateUI()
     }
     
     // MARK: Simple UI
@@ -86,7 +87,6 @@ class ExperienceViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print(indexPath.row)
         guard indexPath.row == 0 else { // must level up in order
             return
         }
